@@ -4,7 +4,7 @@ body {
 	max-width: 650px;
 	margin: 0 auto;
 	padding: 1rem;
-	/* background-image: url('./../images/ireland.webp'); */
+	background-image: url('./../images/ireland.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 
