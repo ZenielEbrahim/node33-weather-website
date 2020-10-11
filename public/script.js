@@ -2,9 +2,11 @@
  const search = document.querySelector('input')
  const messageOne = document.getElementById('message-one')
  const messageTwo = document.getElementById('message-two')
+ const image = document.querySelector('img')//====working on
 
 
-
+console.dir(image)
+console.log('working script')
  weatherForm.addEventListener('submit', (e)=>{
      e.preventDefault()
      const location = search.value
@@ -20,6 +22,7 @@
         }else{
             messageOne.textContent=data.location
             messageTwo.textContent= data.weather
+            image.src= data.icon
         }
         })
     })

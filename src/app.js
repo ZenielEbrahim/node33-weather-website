@@ -67,11 +67,14 @@ app.get('/weather', (req, res) => {
 			//-----------------------------------
 			res.send({
 				location,
-				weather: `${forecastData.weather}. It is currently ${forecastData.temperature} degrees out. It feels like ${forecastData.feelslike} degrees.`,
-				address:req.query.address
+				weather: `${forecastData.weather}. It is currently ${forecastData.temperature} degrees out. It feels like ${forecastData.feelslike} degrees. Precipitation is ${forecastData.all.precip*100}%`,
+				address:req.query.address,
+				precipitation:forecastData.all.precip,
+				icon:forecastData.all.weather_icons[0],
+				all:forecastData.all
 			});
 			///-----------------
-console.log(forecast)
+
 			
 		});
 	/////=================================

@@ -13,7 +13,9 @@ const forecast = (latitude, longitude, callback) => {
 			callback(undefined, {
 				weather: data.weather_descriptions[0],
 				temperature: data.temperature,
-				feelslike: data.feelslike
+				feelslike: data.feelslike,
+				precipitation:data.precip,
+				all:data
 			});
 		}
 	});
